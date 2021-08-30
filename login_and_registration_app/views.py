@@ -17,7 +17,7 @@ def registration_user(request):
                 pass
                 # print("Пользователь уже есть..")
             else:
-                if password == password2: # если пароли верные
+                if password == password2 and len(password and password2 and username and email) != 0: # если пароли верные
                     User.objects.create_user(username, email, password)
                     # print("Пользователь создан", username)
                     login_user(request)
